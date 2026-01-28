@@ -1,0 +1,33 @@
+#Tomas Vargas
+
+#Palindromas
+def es_palindroma():
+    palabra_original = input("Ingrese una palabra: ")
+    palabra = palabra_original.lower().replace(" ", "")
+    lista_letras = []
+    for letra in palabra:
+        lista_letras.append(letra)
+    
+    lista_invertida = []
+    for i in range(len(lista_letras)-1, -1, -1):
+        lista_invertida.append(lista_letras[i])
+
+    if lista_letras == lista_invertida:
+        print(f"{palabra_original} es palindroma")
+    else:
+        print(f"{palabra_original} no es palindroma")
+
+#Fibonacci
+def fibonacci():
+    numero = int(input("Ingrese un numero: "))
+    if numero <= 0:
+        print("El numero debe ser mayor que cero")
+    elif numero == 1:
+        print("Los primeros 1 numero de Fibonacci son: [0]")
+    else:
+        lista_fibo = [0, 1]
+        while len(lista_fibo) < numero:
+            siguiente_numero = lista_fibo[-1] + lista_fibo[-2]
+            lista_fibo.append(siguiente_numero)
+        print(f"Los primeros {numero} numeros de Fibonacci son: {lista_fibo}")
+
