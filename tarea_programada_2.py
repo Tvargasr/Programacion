@@ -390,6 +390,7 @@ def persona_mas_pesada():
 def menu():    
     opcion = '0'
     while opcion != '9':
+        print("")
         print("Menú de opciones:")
         print("1. Ingresar nueva persona")
         print("2. Mostrar todas las personas")
@@ -400,7 +401,9 @@ def menu():
         print("7. Encontrar la persona mas alta")
         print("8. Encontrar la persona mas pesada")
         print("9. Salir")
+        print("")
         opcion = input("Seleccione una opció del 1 al 9: ")
+        print("")
         if opcion == '1':
             agregar_persona()
         elif opcion == '2':
