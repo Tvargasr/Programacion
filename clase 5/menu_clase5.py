@@ -18,23 +18,23 @@ def menu_volumenes():
         volumen = v.cubo(lado)
         print(f"El volumen del cubo es: {volumen}")
     elif opcion == 2:
-        radio = float(input("Ingrese el radio de la esfera: "))
+        radio = float(input("Ingrese el radio: "))
         volumen = v.esfera(radio)
         print(f"El volumen de la esfera es: {volumen}")
     elif opcion == 3:
-        radio = float(input("Ingrese el radio del cilindro: "))
-        altura = float(input("Ingrese la altura del cilindro: "))
+        radio = float(input("Ingrese el radio: "))
+        altura = float(input("Ingrese la altura: "))
         volumen = v.cilindro(radio, altura)
         print(f"El volumen del cilindro es: {volumen}")
     elif opcion == 4:
-        radio = float(input("Ingrese el radio del cono: "))
-        altura = float(input("Ingrese la altura del cono: "))
+        radio = float(input("Ingrese el radio: "))
+        altura = float(input("Ingrese la altura: "))
         volumen = v.cono(radio, altura)
         print(f"El volumen del cono es: {volumen}")
     elif opcion == 5:
-        longitud = float(input("Ingrese la longitud del paralelepípedo: "))
-        ancho = float(input("Ingrese el ancho del paralelepípedo: "))
-        altura = float(input("Ingrese la altura del paralelepípedo: "))
+        longitud = float(input("Ingrese la longitud: "))
+        ancho = float(input("Ingrese el ancho: "))
+        altura = float(input("Ingrese la altura: "))
         volumen = v.paralepipedo(longitud, ancho, altura)
         print(f"El volumen del paralelepípedo es: {volumen}")
     else:
