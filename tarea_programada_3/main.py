@@ -1,24 +1,46 @@
 #Tarea Programada 3 - Sopa de Letras
 #Autor: Tomás Vargas
 
-from matriz_sopa import generar_matriz_sopa, imprimir_matriz_resuelta
+from matriz_sopa import generar_matriz_sopa, imprimir_matriz_resuelta, imprimir_matriz
 from palabras_sopa import pedir_palabras, colocar_palabras_en_matriz
 
 # Función principal del programa
 def main():
+    palabras = []
+    matriz = []
     while True:
         print("Sopa de Letras")
-        print("1. Generar Sopa de Letras")
-        print("2. Salir")
+        print("1. Ingresar palabras")
+        print("2. Imprimir Sopa de Letras")
+        print("3. Imprimir Sopa de Letras Resuelta")
+        print("4. Salir")
         opcion = input("Selecciona una opción: ")
         if opcion == '1':
-            # Generar la matriz de la sopa de letras, pedir las palabras, colocarlas en la matriz y mostrar el resultado
-            matriz = generar_matriz_sopa()
-            palabras = pedir_palabras()
-            posiciones_palabras = colocar_palabras_en_matriz(matriz, palabras)
-            imprimir_matriz_resuelta(matriz, posiciones_palabras)
+            try:
+                numero_palabras = int(input("¿Cuántas palabras deseas ingresar? (máximo 15): "))
+                if numero_palabras < 1 or numero_palabras > 15:
+                    print("Por favor, ingresa un número entre 1 y 15.")
+                else:
+                    palabras = pedir_palabras(numero_palabras)
+                    matriz = generar_matriz_sopa()
+                    posiciones_palabras = colocar_palabras_en_matriz(matriz, palabras)
+            except ValueError:
+                print("Entrada no válida. Por favor, ingresa un número entero.")
+
         elif opcion == '2':
-            print("¡Hasta luego!")
+            if not palabras:
+                print("Primero debes ingresar las palabras.")
+            else:
+                imprimir_matriz(matriz, posiciones_palabras)
+
+        elif opcion == '3':
+            if not palabras:
+                print("Primero debes ingresar las palabras.")
+            else:
+                imprimir_matriz_resuelta(matriz, posiciones_palabras)
+
+        elif opcion == '4':
+            print("¡Gracias por jugar! Hasta luego.")
             break
 
         else:

@@ -24,3 +24,15 @@ def imprimir_matriz_resuelta(matriz, posiciones_palabras):
                 # Letras normales
                 fila_str += letra + " "
         print(fila_str)
+
+def imprimir_matriz(matriz, posiciones_palabras):
+    for fila_idx, fila in enumerate(matriz):
+        fila_str = ""
+        for col_idx, letra in enumerate(fila):
+            if (fila_idx, col_idx) in posiciones_palabras:
+                # letras de las palabras ocultas sin color
+                fila_str +=  letra + " "
+            else:
+                # Letras normales
+                fila_str += letra + " "
+        print(fila_str)

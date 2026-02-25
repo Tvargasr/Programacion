@@ -1,13 +1,13 @@
 import random
 
-def pedir_palabras():
+def pedir_palabras(numero_palabras):
     # Pedir al usuario que ingrese 15 palabras para la sopa de letras
     palabras = []
-    for i in range(15):
+    for i in range(numero_palabras):
         palabra = input(f"Ingresa la palabra {i + 1}: ")
         if " " in palabra:
             print("Las palabras no pueden contener espacios. Intenta de nuevo.")
-            return pedir_palabras()
+            return pedir_palabras(numero_palabras)
         
         palabras.append(palabra)
     return palabras
