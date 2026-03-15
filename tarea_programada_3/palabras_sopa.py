@@ -8,6 +8,9 @@ def pedir_palabras(numero_palabras):
         if " " in palabra:
             print("Las palabras no pueden contener espacios. Intenta de nuevo.")
             return pedir_palabras(numero_palabras)
+        if len(palabra) > 50:
+            print("Las palabras no pueden tener más de 50 caracteres. Intenta de nuevo.")
+            return pedir_palabras(numero_palabras)  
         
         palabras.append(palabra)
     return palabras
