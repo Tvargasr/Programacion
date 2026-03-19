@@ -1,0 +1,16 @@
+[
+    {
+        "nombre": "tomas",
+        "telefono": 83184091,
+        "email": "tomavargas",
+        "edad": 21,
+        "residencia": "hola"
+    },
+    {
+        "nombre": "jose",
+        "telefono": 787887,
+        "email": "josem",
+        "edad": 32,
+        "residencia": "adios"
+    }
+]
