@@ -1,3 +1,6 @@
+from manejo_archivos import guardar_datos
+
+
 def agregar_contacto(contactos):
     print("Agregando un nuevo contacto...")
     nombre = input("Ingrese el nombre: ")
@@ -24,6 +27,7 @@ def agregar_contacto(contactos):
     
     contactos.append(nuevo_contacto)
     print("Contacto agregado exitosamente.")
+    guardar_datos(contactos)
     return contactos
 
 def buscar_por_nombre(contactos, nombre):

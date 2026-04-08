@@ -1,7 +1,7 @@
 #Tomas Vargas
 #Tarea Programada 5 - Agenda de Contactos
 
-from manejo_archivos import cargar_datos_csv, cargar_datos_json, guardar_datos
+from manejo_archivos import cargar_datos_csv, cargar_datos_json
 from manejo_contactos import agregar_contacto, buscar_por_nombre, buscar_por_telefono, mostrar_promedio_edad, mostrar_todos_los_contactos
 
 
@@ -46,7 +46,6 @@ def menu():
             mostrar_todos_los_contactos(contactos)
         elif opcion == "7":
             print("Saliendo del programa...")
-            guardar_datos(contactos)
             break
         else:
             print("Opción no válida. Por favor, intente de nuevo.")
